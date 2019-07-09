@@ -18,16 +18,8 @@ var indexRoutes		 = require("./routes/index"),
 	commentRoutes 	 = require("./routes/comments");
 	
 // mongoose.connect("mongodb://localhost:27017/yelp_camp_v10Deployed",{ useNewUrlParser : true});
-// mongoose.connect("mongodb+srv://vivek:hellovivek@cluster1-lfoo8.mongodb.net/test?retryWrites=true&w=majority",{ useNewUrlParser : true});
+mongoose.connect("mongodb+srv://vivek:hellovivek@cluster1-lfoo8.mongodb.net/test?retryWrites=true&w=majority",{ useNewUrlParser : true});
 
-const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://vivek:hellovivek@cluster1-lfoo8.mongodb.net/test?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
 
 
 mongoose.set('useFindAndModify', false);
