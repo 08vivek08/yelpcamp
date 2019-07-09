@@ -17,8 +17,10 @@ var indexRoutes		 = require("./routes/index"),
 	campgroundRoutes = require("./routes/campgrounds"), 	
 	commentRoutes 	 = require("./routes/comments");
 	
+	// console.log(process.env.DATABASEURL);
+	mongoose.connect(process.env.DATABASEURL,{ useNewUrlParser : true});
 // mongoose.connect("mongodb://localhost:27017/yelp_camp_v10Deployed",{ useNewUrlParser : true});
-mongoose.connect("mongodb+srv://vivek:hellovivek@cluster01-lfoo8.gcp.mongodb.net/test?retryWrites=true&w=majority",{ useNewUrlParser : true});
+// mongoose.connect("mongodb+srv://vivek:hellovivek@cluster01-lfoo8.gcp.mongodb.net/test?retryWrites=true&w=majority",{ useNewUrlParser : true});
 
 
 
