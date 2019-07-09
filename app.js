@@ -18,7 +18,7 @@ var indexRoutes		 = require("./routes/index"),
 	commentRoutes 	 = require("./routes/comments");
 	
 // mongoose.connect("mongodb://localhost:27017/yelp_camp_v10Deployed",{ useNewUrlParser : true});
-mongoose.connect("mongodb+srv://vivek:hellovivek@cluster1-lfoo8.mongodb.net/test?retryWrites=true&w=majority",{ useNewUrlParser : true});
+mongoose.connect("mongodb+srv://vivek:hellovivek@cluster01-lfoo8.gcp.mongodb.net/test?retryWrites=true&w=majority",{ useNewUrlParser : true});
 
 
 
