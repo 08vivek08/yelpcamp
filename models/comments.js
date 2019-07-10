@@ -8,7 +8,9 @@ var commentSchema=mongoose.Schema({
 			ref: "User"
 		},
 		username: String
-	}
+	},
+	date: Date,
+	created: String
 });
 
 module.exports=mongoose.model("Comment",commentSchema);

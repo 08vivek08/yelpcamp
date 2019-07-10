@@ -33,6 +33,8 @@ router.post("/", middleware.isLoggedIn ,function(req,res){
 					console.log(err);
 				}
 				else{
+					var d= new Date();
+					comment.date=d;
 					// add username and id to comment
 						// console.log(req.user);
 					comment.author.id=req.user._id;
@@ -71,6 +73,9 @@ router.put("/:comment_id",middleware.checkCommentOwner,function(req,res){
 			res.redirect("/campgrounds");
 		}
 		else{
+			var d= new Date();
+			UpdatedComment.date=d;
+			UpdatedComment.save();
 			res.redirect("/campgrounds/"+req.params.id);
 		}
 	});

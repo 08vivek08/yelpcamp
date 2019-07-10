@@ -53,7 +53,8 @@ router.get("/:id",function(req,res){
 		else{
 			// console.log(camp);
 			// render show template with that campground
-			res.render("campgrounds/show",{camp: camp});
+			var now = new Date();
+			res.render("campgrounds/show",{camp: camp,now: now});
 		}
 	});
 });
